@@ -14,11 +14,11 @@ public class SpawnerScript : MonoBehaviour
         _points = GetComponentsInChildren<SpawnPoint>();
 
     private void Start() =>
-        StartCoroutine(CreateEnemy());
+        StartCoroutine(CreateEnemy(_delay));
 
-    private IEnumerator CreateEnemy()
+    private IEnumerator CreateEnemy(float delay)
     {
-        WaitForSeconds wait = new WaitForSeconds(_delay);
+        WaitForSeconds wait = new WaitForSeconds(delay);
 
         foreach (SpawnPoint point in _points)
         {
