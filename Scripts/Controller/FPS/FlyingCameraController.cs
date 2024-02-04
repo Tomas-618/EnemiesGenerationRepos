@@ -39,9 +39,6 @@ public class FlyingCameraController : BasicController
         _transform = transform;
     }
 
-    private void Start() =>
-        _speed = _walkingSpeed;
-
     public override void Move()
     {
         Vector3 move = new Vector3(Input.GetAxis(AxisNames.Horizontal), Input.GetAxis(AxisNames.Jump), Input.GetAxis(AxisNames.Vertical));
