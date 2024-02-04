@@ -2,10 +2,8 @@ using UnityEngine;
 
 public abstract class BasicController : MonoBehaviour, IMovable, IRotatable
 {
-    private void Update()
-    {
+    private void Update() =>
         Control();
-    }
 
     public abstract void Move();
 
